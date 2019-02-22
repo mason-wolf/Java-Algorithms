@@ -10,9 +10,7 @@ public class Main {
 		for (int i = 0; i < numberArray.length; i++)
 		{
 			System.out.println(numberArray[i]);
-		}
-
-		
+		}	
 	}
 
 	static void sort(int[] numberArray)
