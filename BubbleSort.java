@@ -11,12 +11,10 @@ public class Main {
 		{
 			System.out.println(numberArray[i]);
 		}
-		
 	}
 
 	static void bubbleSort(int[] numberArray)
 	{
-
 		for (int i = 0; i < numberArray.length; i++)
 		{
 			for (int j = 0; j < numberArray.length - 1; j++)
@@ -29,6 +27,5 @@ public class Main {
 				}
 			}
 		}
-    
 	}
 }
