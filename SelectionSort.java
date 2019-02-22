@@ -5,7 +5,7 @@ public class Main {
 	public static void main(String[] args) {
 
 		int[] numberArray = new int[] {2, 1, 1, 5, 6};
-		sort(numberArray);
+		selectionSort(numberArray);
 		
 		for (int i = 0; i < numberArray.length; i++)
 		{
@@ -13,7 +13,7 @@ public class Main {
 		}	
 	}
 
-	static void sort(int[] numberArray)
+	static void selectionSort(int[] numberArray)
 	{
 		int minIndex, temp;
 		
