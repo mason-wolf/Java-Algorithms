@@ -1,1 +1,1 @@
-Common algorithms in Java.
+Software design patterns in Java
