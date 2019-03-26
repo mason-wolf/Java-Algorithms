@@ -1,28 +1,84 @@
 package main;
 
+import java.util.Scanner;
+
 public class PersonManager {
 
-	public static void main(String[] args) {
+	private static Scanner scanner;
 
-		Customer customer = new Customer("fname", "lastname");
-		customer.setCustomerNumber("number");
+	public static void main(String[] args) {
 		
-		System.out.println(customer.toString());
+		System.out.println("Welcome to Person Manager");
 		
-		Employee employee = new Employee("Mason", "Wolf", "419413137");
-		employee.setSSN("419413137");
+		scanner = new Scanner(System.in);
 		
-		String cardNumber = "443-2345-1245-3333*321&&2134";
+		String choice = "y";
 		
-		for (int i = 0; i < cardNumber.length(); i++)
+		while (choice.equalsIgnoreCase("y"))
 		{
-			if (cardNumber.charAt(i) == '-')
+			
+			Boolean newEntry = true;
+			
+			while (newEntry)
 			{
-				cardNumber.replace(cardNumber.charAt(i), ' ');
+
+				String selection = Console.getString("Create customer or employee? (c/e)");
+				
+				if (selection.equalsIgnoreCase("c"))
+				{
+							
+					String firstName = Console.getString("First name: ");
+					String lastName = Console.getString("Last name: ");
+					String customerNumber = Console.getString("Customer number: ");
+					
+				    Customer newCustomer = new Customer(firstName, lastName);
+				    newCustomer.setCustomerNumber(customerNumber);
+				    
+				    System.out.println("You enetered a new customer: ");
+				    System.out.println(newCustomer.toString());
+				    newEntry = false;
+					
+				}
+				else if (selection.equalsIgnoreCase("e"))
+				{
+
+					String firstName = Console.getString("First name: ");
+					String lastName = Console.getString("Last name: ");
+				    String ssn = Console.validateSSN("SSN: ");
+
+				    Employee newEmployee = new Employee(firstName, lastName, ssn);
+				    
+				    System.out.println("You entered a new employee: ");
+				    System.out.println(newEmployee.toString());
+				}
+				else 
+				{
+					System.out.println("Error! Entry must be 'c' or 'e'. Try again.");
+				}
+
+			}
+			
+			Boolean validChoice = false;
+			
+			while (!validChoice)
+			{
+				System.out.println("Continue? (y/n)");
+				choice = scanner.next();
+				
+				if (choice.equalsIgnoreCase("y"))
+				{
+					validChoice = true;
+				}
+				else if (choice.equalsIgnoreCase("n"))
+				{
+					validChoice = true;
+				}
+				else 
+				{
+					System.out.println("Error! Must be 'y' or 'n'. Try again.");
+				}
 			}
 		}
-		
-		System.out.println(cardNumber);
 	}
 
 }
