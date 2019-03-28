@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="AccountManager/src"/>
+	<classpathentry kind="src" path="AgencyManagementSystem/src"/>
+	<classpathentry kind="src" path="AreaCalculator/src"/>
+	<classpathentry kind="src" path="ArrayListExamCalculator/src"/>
+	<classpathentry kind="src" path="CreditCardValidator/src"/>
+	<classpathentry kind="src" path="ExamGradingSystem/src"/>
+	<classpathentry kind="src" path="ExamScoreCalculatorAdvanced/src"/>
+	<classpathentry kind="src" path="ExamScoreCalculatorSimple/src"/>
+	<classpathentry kind="src" path="PersonManager/src"/>
+	<classpathentry kind="src" path="SalesReport/src"/>
+	<classpathentry kind="src" path="TroubleTicketSystem/src"/>
+	<classpathentry kind="output" path="AccountManager/build/classes"/>
+</classpath>

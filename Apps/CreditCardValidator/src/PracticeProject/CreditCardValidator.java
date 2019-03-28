@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author Mason
  */
-public class App {
+public class CreditCardValidator {
 
     private static Scanner sc = new Scanner(System.in);
     /**
